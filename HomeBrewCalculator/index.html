@@ -1,10 +1,82 @@
 ﻿<!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Home Brewing Calculators</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
+    <div class="container">
+        <h1>Home Brewing Calculators</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-primary se">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Spirits' Effects on ABV</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Use this to determine the increase in your beer's ABV from the addition of spirits.
+                        </p>
+                        <p>
+                            Note that the volumes don't ask for a dimension (ounces, gallons, etc.).  It won't matter as long as the volume for the beer and the spirit are in the same measure.
+                        </p>
+                        <div class="row form-group">
+                            <label for="seVolumeBeerValue" class="col-sm-1 form-control-static">Beer</label>
+                            <div class="col-sm-11 form-inline">
+                                <input type="tel" class="form-control text-right" id="seVolumeBeerValue" placeholder="Volume">
+                                <!--<select class="form-control" id="seVolumeBeerDimension">
+                                    <option value="oz">Ounces</option>
+                                    <option value="pt">Pints</option>
+                                    <option value="qt">Quarts</option>
+                                    <option value="gal">Gallons</option>
+                                </select>-->
+                                <span class="form-control-static margin-left-15 margin-right-15">at</span>
+                                <input type="tel" class="form-control text-right" id="seVolumeBeerAbv" placeholder="ABV">
+                                <span class="form-control-static">% ABV</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="seVolumeSpiritValue" class="col-sm-1 form-control-static">Spirit</label>
+                            <div class="col-sm-11 form-inline">
+                                <input type="tel" class="form-control text-right" id="seVolumeSpiritValue" placeholder="Volume">
+                                <!--<select class="form-control" id="seVolumeSpiritDimension">
+                                    <option value="oz">Ounces</option>
+                                    <option value="pt">Pints</option>
+                                    <option value="qt">Quarts</option>
+                                    <option value="gal">Gallons</option>
+                                </select>-->
+                                <span class="form-control-static margin-left-15 margin-right-15">at</span>
+                                <input type="tel" class="form-control text-right" id="seVolumeSpiritAbv" placeholder="ABV">
+                                <span class="form-control-static">% ABV</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <a href="javascript:void(0);" id="seBtnCalculate" class="btn btn-primary">Calculate</a>
+                            <a href="javascript:void(0);" id="seBtnClear" class="btn btn-link">Clear</a>
+                        </div>                        
+                        <div id="seAlert" class="alert alert-success" role="alert"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <footer>
+            <p>Copyright &copy; 2016 - 2017 Tim S. Van Haren</p>
+        </footer>
+    </div>
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
