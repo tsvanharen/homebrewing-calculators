@@ -93,14 +93,7 @@ $(function() {
             $("#seVolumeSpiritAbv").val("0.0");
         }
 
-        // this one seems wrong:
-        // http://www.homebrewtalk.com/showthread.php?t=222366
-        // ((volume of beer * alcohol of beer) + (volume of spirit * alcohol of spirit)) / total volume
-
-        // going with this one:
-        // https://www.homebrewersassociation.org/forum/index.php?topic=18455.0
         // (abv of spirit * volume of spirit) / (volume of beer + volume of spirit)
-
         var spiritAlcoholVolume = spiritVolume * spiritAbv;
         var totalVolume = beerVolume + spiritVolume;
 
