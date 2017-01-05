@@ -9,3 +9,7 @@
 #seAlert {
     display: none;
 }
+
+.aau .has-success .form-control {
+    background-color: #dff0d8;
+}

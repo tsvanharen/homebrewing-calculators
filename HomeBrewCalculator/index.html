@@ -18,7 +18,7 @@
     <div class="container">
         <h1>Home Brewing Calculators</h1>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <div class="panel panel-primary se">
                     <div class="panel-heading">
                         <h3 class="panel-title">Spirits' Effects on ABV</h3>
@@ -33,31 +33,23 @@
                         <div class="row form-group">
                             <label for="seVolumeBeerValue" class="col-sm-1 form-control-static">Beer</label>
                             <div class="col-sm-11 form-inline">
-                                <input type="tel" class="form-control text-right" id="seVolumeBeerValue" placeholder="Volume">
-                                <!--<select class="form-control" id="seVolumeBeerDimension">
-                                    <option value="oz">Ounces</option>
-                                    <option value="pt">Pints</option>
-                                    <option value="qt">Quarts</option>
-                                    <option value="gal">Gallons</option>
-                                </select>-->
-                                <span class="form-control-static margin-left-15 margin-right-15">at</span>
-                                <input type="tel" class="form-control text-right" id="seVolumeBeerAbv" placeholder="ABV">
-                                <span class="form-control-static">% ABV</span>
+                                <input type="tel" class="form-control text-right decimal" id="seVolumeBeerValue" placeholder="Volume">
+                                <span class="form-control-static">at</span>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="seVolumeBeerAbv" placeholder="ABV">
+                                    <div class="input-group-addon">%</div>
+                                </div>
                             </div>
                         </div>
                         <div class="row form-group">
                             <label for="seVolumeSpiritValue" class="col-sm-1 form-control-static">Spirit</label>
                             <div class="col-sm-11 form-inline">
-                                <input type="tel" class="form-control text-right" id="seVolumeSpiritValue" placeholder="Volume">
-                                <!--<select class="form-control" id="seVolumeSpiritDimension">
-                                    <option value="oz">Ounces</option>
-                                    <option value="pt">Pints</option>
-                                    <option value="qt">Quarts</option>
-                                    <option value="gal">Gallons</option>
-                                </select>-->
-                                <span class="form-control-static margin-left-15 margin-right-15">at</span>
-                                <input type="tel" class="form-control text-right" id="seVolumeSpiritAbv" placeholder="ABV">
-                                <span class="form-control-static">% ABV</span>
+                                <input type="tel" class="form-control text-right decimal" id="seVolumeSpiritValue" placeholder="Volume">
+                                <span class="form-control-static">at</span>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="seVolumeSpiritAbv" placeholder="ABV">
+                                    <div class="input-group-addon">%</div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -74,6 +66,54 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-sm-6">
+                <div class="panel panel-primary aau">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Alpha Acid Calculator</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Use this to determine the resulting Alpha Acid Units (AAU) or weight needed for your hops.  Alpha Acid % is required.  Leave the field blank that you need to calculate.
+                        </p>
+                        
+                        <div class="form-group">
+                            <div class="form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="aauAA" placeholder="Alpha Acid">
+                                    <div class="input-group-addon">%</div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5 form-group form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="aauWeightOz" placeholder="Weight">
+                                    <div class="input-group-addon">oz</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 form-group form-inline text-center">
+                                <span class="form-control-static">or</span>
+                            </div>
+                            <div class="col-sm-5 form-group form-inline">
+                                <input type="tel" class="form-control text-right decimal" id="aauAAU" placeholder="AAUs">
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <a href="javascript:void(0);" id="aauBtnCalculate" class="btn btn-primary">Calculate</a>
+                            <a href="javascript:void(0);" id="aauBtnClear" class="btn btn-link">Clear</a>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <strong>Sources</strong>
+                        <ul>
+                            <li><a href="http://howtobrew.com/book/section-1/hops/hop-bittering-calculations" target="_blank"><em>How to Brew</em>, Chapter 5</a></li>
+                            <li><a href="http://byo.com/hops/item/122-alpha-hop-soup-figuring-bitterness-ibus-aaus-and-hbus" target="_blank">Brew Your Own</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <footer>
@@ -84,5 +124,7 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/calc-se.js"></script>
+    <script src="js/calc-aau.js"></script>
 </body>
 </html>
