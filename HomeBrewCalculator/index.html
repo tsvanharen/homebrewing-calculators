@@ -53,8 +53,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <a href="javascript:void(0);" id="seBtnCalculate" class="btn btn-primary">Calculate</a>
-                            <a href="javascript:void(0);" id="seBtnClear" class="btn btn-link">Clear</a>
+                            <a href="javascript:void(0);" id="seBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
+                            <a href="javascript:void(0);" id="seBtnClear" class="btn btn-link btn-clear">Clear</a>
                         </div>                        
                         <div id="seAlert" class="alert alert-success" role="alert"></div>                        
                     </div>
@@ -77,6 +77,11 @@
                             Use this to determine the resulting Alpha Acid Units (AAU) or weight needed for your hops.  Alpha Acid % is required.  Leave the field blank that you need to calculate.
                         </p>
                         
+                        <!--<div class="btn-group" role="group">
+                            <a href="javascript:void(0);" class="btn btn-primary disabled" disabled="disabled" role="button">Weight of Hops</a>
+                            <a href="javascript:void(0);" class="btn btn-primary active" role="button">AAUs</a>
+                        </div>-->
+
                         <div class="form-group">
                             <div class="form-inline">
                                 <div class="input-group">
@@ -100,8 +105,8 @@
                             </div>
                         </div>                        
                         <div class="form-group">
-                            <a href="javascript:void(0);" id="aauBtnCalculate" class="btn btn-primary">Calculate</a>
-                            <a href="javascript:void(0);" id="aauBtnClear" class="btn btn-link">Clear</a>
+                            <a href="javascript:void(0);" id="aauBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
+                            <a href="javascript:void(0);" id="aauBtnClear" class="btn btn-link btn-clear">Clear</a>
                         </div>
                     </div>
                     <div class="panel-footer">
@@ -114,6 +119,45 @@
                 </div>
             </div>
 
+            <div class="col-sm-6">
+                <div class="panel panel-primary btl">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Bottle Calculator</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Use this to determine the number of bottles you need for a batch of beer.
+                        </p>
+
+                        <div class="row form-group">
+                            <label for="btlVolumeBeerValue" class="col-sm-3 form-control-static">Batch Size</label>
+                            <div class="col-sm-9 form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="btlVolumeBeerValue" placeholder="Volume">
+                                    <div class="input-group-addon">gal</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+                            <label for="btlVolumeBottleSizeValue" class="col-sm-3 form-control-static">Bottle Size</label>
+                            <div class="col-sm-9 form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="btlVolumeBottleSizeValue" placeholder="">
+                                    <div class="input-group-addon">oz</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <a href="javascript:void(0);" id="btlBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
+                            <a href="javascript:void(0);" id="btlBtnClear" class="btn btn-link btn-clear">Clear</a>
+                        </div>
+                        <div id="btlAlert" class="alert alert-success" role="alert"></div>         
+                    </div>                    
+                </div>
+            </div>
         </div>
 
         <footer>
@@ -126,5 +170,6 @@
     <script src="js/script.js"></script>
     <script src="js/calc-se.js"></script>
     <script src="js/calc-aau.js"></script>
+    <script src="js/calc-btl.js"></script>
 </body>
 </html>

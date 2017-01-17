@@ -3,10 +3,21 @@
 };
 
 function log(msg) {
-    if (typeof console !== "undefined" && console && typeof console.log !== "undefined" && console.log && appConfig.enableLogging) {
+    if (typeof console !== "undefined" && console && typeof console.log === "function" && console.log && appConfig.enableLogging) {
         console.log(msg);
     }
 }
+
+$(function() {
+    $(".panel").on("keyup", function(event) {
+        if (event.which == 13) {
+            $(this).find(".btn-calc").click();
+            return;
+        } else if (event.which == 27) {
+            $(this).find(".btn-clear").click();
+        }
+    });    
+});
 
 $(function() {
     // http://stackoverflow.com/a/19667152/107009

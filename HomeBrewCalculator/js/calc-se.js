@@ -50,6 +50,6 @@
             resultingAbv = beerAbv;
         }
 
-        $("#seAlert").show().html("This adds <strong>" + addedAbv + "%</strong> ABV to your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.");
+        $("#seAlert").show().html("This adds <strong>" + addedAbv + "% ABV</strong> to your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.");
     });
 });
