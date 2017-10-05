@@ -17,12 +17,17 @@
 <body>
     <div class="container">
         <h1>Home Brewing Calculators</h1>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="panel panel-primary se">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Spirits' Effects on ABV</h3>
-                    </div>
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#spirits" aria-controls="spirits" role="tab" data-toggle="tab">Spirits' Effects on ABV</a></li>
+                <li role="presentation"><a href="#aac" aria-controls="aac" role="tab" data-toggle="tab">Hop Alpha Acid Conversion</a></li>
+                <li role="presentation"><a href="#aau" aria-controls="aau" role="tab" data-toggle="tab">Alpha Acid Units</a></li>
+                <li role="presentation"><a href="#bottles" aria-controls="bottles" role="tab" data-toggle="tab">Bottle Calculator</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="spirits">
                     <div class="panel-body">
                         <p>
                             Use this to determine the increase in your beer's ABV from the addition of spirits.
@@ -55,8 +60,8 @@
                         <div class="form-group">
                             <a href="javascript:void(0);" id="seBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
                             <a href="javascript:void(0);" id="seBtnClear" class="btn btn-link btn-clear">Clear</a>
-                        </div>                        
-                        <div id="seAlert" class="alert alert-success" role="alert"></div>                        
+                        </div>
+                        <div id="seAlert" class="alert alert-success" role="alert"></div>
                     </div>
                     <div class="panel-footer">
                         <strong>Sources</strong>
@@ -65,22 +70,59 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-6">
-                <div class="panel panel-primary aau">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Alpha Acid Calculator</h3>
+                <div role="tabpanel" class="tab-pane fade" id="aac">
+                    <div class="panel-body">
+                        <p>
+                            Use this to determine the amount of a given hop to use in a recipe that calls for that hop with a different alpha acid percentage than what you have.
+                        </p>
+
+                        <div class="row form-group">
+                            <label for="aacRecipeAA" class="col-sm-2 form-control-static">Recipe's Hops</label>
+                            <div class="col-sm-10 form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="aacRecipeAA" placeholder="Alpha Acid">
+                                    <div class="input-group-addon">%</div>
+                                </div>
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="aacRecipeWeight" placeholder="Weight">
+                                    <div class="input-group-addon">oz, g, etc.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="aacYourAA" class="col-sm-2 form-control-static">Your Hops</label>
+                            <div class="col-sm-10 form-inline">
+                                <div class="input-group">
+                                    <input type="tel" class="form-control text-right decimal" id="aacYourAA" placeholder="Alpha Acid">
+                                    <div class="input-group-addon">%</div>
+                                </div>
+                                <div id="aacResult" class="input-group hidden">
+                                    <input type="tel" class="form-control text-right decimal" id="aacYourWeight" placeholder="Weight" disabled="disabled">
+                                    <div class="input-group-addon">oz, g, etc.</div>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                        <div class="form-group">
+                            <a href="javascript:void(0);" id="aacBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
+                            <a href="javascript:void(0);" id="aacBtnClear" class="btn btn-link btn-clear">Clear</a>
+                        </div>
                     </div>
+                    <div class="panel-footer">
+                        <strong>Sources</strong>
+                        <ul>
+                            <li><a href="http://howtobrew.com/book/section-1/hops/hop-bittering-calculations" target="_blank"><em>How to Brew</em>, Chapter 5</a></li>
+                            <li><a href="http://byo.com/hops/item/122-alpha-hop-soup-figuring-bitterness-ibus-aaus-and-hbus" target="_blank">Brew Your Own</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane fade" id="aau">
                     <div class="panel-body">
                         <p>
                             Use this to determine the resulting Alpha Acid Units (AAU) or weight needed for your hops.  Alpha Acid % is required.  Leave the field blank that you need to calculate.
                         </p>
-                        
-                        <!--<div class="btn-group" role="group">
-                            <a href="javascript:void(0);" class="btn btn-primary disabled" disabled="disabled" role="button">Weight of Hops</a>
-                            <a href="javascript:void(0);" class="btn btn-primary active" role="button">AAUs</a>
-                        </div>-->
 
                         <div class="form-group">
                             <div class="form-inline">
@@ -88,7 +130,7 @@
                                     <input type="tel" class="form-control text-right decimal" id="aauAA" placeholder="Alpha Acid">
                                     <div class="input-group-addon">%</div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-5 form-group form-inline">
@@ -103,7 +145,7 @@
                             <div class="col-sm-5 form-group form-inline">
                                 <input type="tel" class="form-control text-right decimal" id="aauAAU" placeholder="AAUs">
                             </div>
-                        </div>                        
+                        </div>
                         <div class="form-group">
                             <a href="javascript:void(0);" id="aauBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
                             <a href="javascript:void(0);" id="aauBtnClear" class="btn btn-link btn-clear">Clear</a>
@@ -117,13 +159,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-sm-6">
-                <div class="panel panel-primary btl">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Bottle Calculator</h3>
-                    </div>
+                <div role="tabpanel" class="tab-pane fade" id="bottles">
                     <div class="panel-body">
                         <p>
                             Use this to determine the number of bottles you need for a batch of beer.
@@ -154,8 +191,8 @@
                             <a href="javascript:void(0);" id="btlBtnCalculate" class="btn btn-primary btn-calc">Calculate</a>
                             <a href="javascript:void(0);" id="btlBtnClear" class="btn btn-link btn-clear">Clear</a>
                         </div>
-                        <div id="btlAlert" class="alert alert-success" role="alert"></div>         
-                    </div>                    
+                        <div id="btlAlert" class="alert alert-success" role="alert"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,6 +206,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/calc-se.js"></script>
+    <script src="js/calc-aac.js"></script>
     <script src="js/calc-aau.js"></script>
     <script src="js/calc-btl.js"></script>
 </body>
