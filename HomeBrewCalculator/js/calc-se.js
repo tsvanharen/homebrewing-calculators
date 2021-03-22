@@ -38,18 +38,29 @@
             $seVolumeSpiritAbv.val("0.0");
         }
 
-        // (abv of spirit * volume of spirit) / (volume of beer + volume of spirit)
+        // ((Volume1 X ABV1) + (Volume2 X ABV2)) / (Volume1 + Volume2)
         var spiritAlcoholVolume = spiritVolume * spiritAbv;
+        var beerAlcoholVolume = beerVolume * beerAbv;
         var totalVolume = beerVolume + spiritVolume;
+        var resultingAbv = (spiritAlcoholVolume + beerAlcoholVolume) / totalVolume;
 
-        var addedAbv = spiritAlcoholVolume / totalVolume;
-        var resultingAbv = beerAbv + addedAbv;
-
-        if (isNaN(addedAbv)) {
-            addedAbv = 0.0;
-            resultingAbv = beerAbv;
+        if (totalVolume <= 0.0) {
+            $("#seAlert").show().html("Total volume should be greater than zero");
+            return;
         }
 
-        $("#seAlert").show().html("This adds <strong>" + addedAbv + "% ABV</strong> to your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.");
+        var msg = "";
+        var abvChange = resultingAbv - beerAbv;
+
+        if (abvChange > 0.0) {
+            msg = "This adds <strong>" + abvChange + "% ABV</strong> to your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.";
+        } else if (abvChange == 0.0) {
+            // no change in ABV
+            msg = "This results in no change in ABV to your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.";
+        } else {
+            msg = "This subtracts <strong>" + Math.abs(abvChange) + "% ABV</strong> from your beer, resulting in a beer with <strong>" + resultingAbv + "% ABV</strong>.";
+        }
+
+        $("#seAlert").show().html(msg);
     });
 });
