@@ -1,10 +1,29 @@
-# HomeBrewCalculator
+# Homebrewing Calculators
 
-## Motivation
-This is a collection of some calculators related to home brewing.
+This is a collection of calculators related to making beer, mead, cider, and wine.
 
-## About
-I built this as a Visual Studio 2015 solution, but it's all just standard client-side code (HTML, CSS, and JavaScript).
+## Tech
 
-## Demo
-Check out the [demo](https://tsvanharen.github.io/HomeBrewCalculator/HomeBrewCalculator/ "Demo").
+* React
+  
+  I used Create React App to quickly generate some boilerplate. 
+  
+  Note: I should have used Vite, as CRA is now abandonware.  There are some out of the box issues with CRA, like:
+  * Lack of support for TypeScript path aliases. This comment mentions the solution that I used in this project:  https://github.com/facebook/create-react-app/issues/12047#issuecomment-1374821527.  This is the actual solution:  https://create-react-app.dev/docs/importing-a-component/#absolute-imports.
+  * Lack of support in general and potential security concerns, as CRA's dependencies have not been updated in over a year.
+
+* TypeScript
+* Tailwind CSS
+  * Setup guide for Tailwind CSS with Create React App:  https://tailwindcss.com/docs/guides/create-react-app.
+* React Router
+  * https://create-react-app.dev/docs/adding-a-router/
+  * https://github.com/remix-run/react-router/blob/dev/examples/basic
+
+## Roadmap
+
+* Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
+* Round the values that are calculated
+* Add prettier (https://prettier.io/docs/en/install)
+* Add vitest (https://blog.ori.co/migrating-a-cra-project-to-vitejs)
+* Add semantic release (https://semantic-release.gitbook.io/semantic-release/usage/installation#installation)
+* Responsiveness
