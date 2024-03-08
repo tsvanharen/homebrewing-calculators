@@ -61,7 +61,7 @@ function Form() {
           ounces, grams, etc.
         </span>
         {' '}
-        of this hop to impart the potential acid acid units of bitterness that your recipe calls for.
+        of this hop to impart the potential alpha acid units of bitterness that your recipe calls for.
       </>
     );
 
