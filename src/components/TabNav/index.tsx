@@ -4,7 +4,8 @@ import { Calculators } from 'types/Calculator';
 
 export default function TabNav() {
   const { pathname } = useLocation();
-  const navItems = Calculators.map((calc) => calc.navItem);
+  let navItems = Calculators.map((calc) => calc.navItem);
+  navItems = [{ title: 'Home', href: '/' }, ...navItems];
 
   return (
     <nav>

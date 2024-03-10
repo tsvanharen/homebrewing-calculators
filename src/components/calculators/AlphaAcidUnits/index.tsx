@@ -6,7 +6,15 @@ import GridInputGroup from 'components/GridInputGroup';
 function Intro() {
   return (
     <p>
-      Use this tool to determine the resulting weight in ounces or alpha acid units (AAU) needed for your hops. The alpha acid percentage is required. Leave the field blank that you need to calculate.
+      Use this tool to determine the resulting weight in ounces or alpha acid units (AAU) needed for your hops.
+    </p>
+  );
+}
+
+function Notes() {
+  return (
+    <p>
+      The alpha acid percentage is required. Leave the field blank that you need to calculate.
     </p>
   );
 }
@@ -134,6 +142,7 @@ const AlphaAcidUnits: Calculator = {
     href: '/alpha-acid-units',
   },
   Intro,
+  Notes,
   Form,
   sources: [
     {

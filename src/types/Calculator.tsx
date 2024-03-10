@@ -24,6 +24,7 @@ export function Render({
   return (
     <div className="border-slate-400 border-2 rounded-md p-6 relative z-10">
       <calculator.Intro />
+      <calculator.Notes />
       <section>
         <calculator.Form />
       </section>
@@ -66,6 +67,7 @@ export const Calculators = [
 export default interface Calculator {
   navItem: CalculatorLink
   Intro: React.ElementType
+  Notes: React.ElementType
   Form: React.ElementType
   sources?: CalculatorLink[]
 }

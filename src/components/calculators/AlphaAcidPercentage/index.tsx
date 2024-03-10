@@ -5,14 +5,17 @@ import GridInputGroup from 'components/GridInputGroup';
 
 function Intro() {
   return (
-    <>
-      <p>
-        This tool is useful when a recipe calls for a hop with a specific alpha acid percentage, but the hops you have available have a different alpha hop percentage.  This tool provides the hop weight you should use to impart the same potential alpha acid units from the recipe.
-      </p>
-      <p>
-        Note that the resulting hop weight will be in the same dimension as the recipe&apos;s hop weight that you enter (ounces, grams, etc.).
-      </p>
-    </>
+    <p>
+      This tool is useful when a recipe calls for a hop with a specific alpha acid percentage, but the hops you have available have a different alpha hop percentage.  This tool provides the hop weight you should use to impart the same potential alpha acid units from the recipe.
+    </p>
+  );
+}
+
+function Notes() {
+  return (
+    <p>
+      Note that the resulting hop weight will be in the same dimension as the recipe&apos;s hop weight that you enter (ounces, grams, etc.).
+    </p>
   );
 }
 
@@ -107,6 +110,7 @@ const AlphaAcidPercentage: Calculator = {
     href: '/alpha-acid-percentage',
   },
   Intro,
+  Notes,
   Form,
   sources: [
     {

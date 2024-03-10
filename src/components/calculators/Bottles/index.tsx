@@ -11,6 +11,10 @@ function Intro() {
   );
 }
 
+function Notes() {
+  return null;
+}
+
 function Form() {
   const [beverageVolumeGal, setBeverageVolumeGal] = useState('');
   const [bottleSizeFlOz, setBottleSizeFlOz] = useState('');
@@ -103,9 +107,10 @@ function Form() {
 const Bottles: Calculator = {
   navItem: {
     title: 'Bottles',
-    href: '/',
+    href: '/bottles',
   },
   Intro,
+  Notes,
   Form,
 };
 

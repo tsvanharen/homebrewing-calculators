@@ -5,10 +5,20 @@ import GridInputGroup from 'components/GridInputGroup';
 
 function Intro() {
   return (
+
+    <p>
+      Use this tool to determine the change in your beverage&apos;s ABV from the addition of liquids post-fermentation, like
+      spirits or backsweeters.
+    </p>
+
+  );
+}
+
+function Notes() {
+  return (
     <>
       <p>
-        Use this to determine the change in your beverage&apos;s ABV from the addition of liquids post-fermentation, like
-        spirits or backsweeters. This assumes that fermentation has been halted prior to addition.
+        Remember to halt fermentation prior to addition to prevent any sugar additions from being fermented out.
       </p>
       <p>
         Note that the volumes don&apos;t ask for a dimension (fluid ounces, gallons, etc.). It won&apos;t matter as long as the
@@ -166,6 +176,7 @@ const Backsweetening: Calculator = {
     href: '/backsweetening',
   },
   Intro,
+  Notes,
   Form,
   sources: [
     {

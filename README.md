@@ -8,9 +8,9 @@ This is a collection of calculators related to making beer, mead, cider, and win
   
   I used Create React App to quickly generate some boilerplate. 
   
-  Note: I should have used Vite, as CRA is now abandonware.  There are some out of the box issues with CRA, like:
+  Note: I should have used Vite, Next.js, etc., as CRA is now abandonware.  There are some out of the box issues with CRA, like:
   * Lack of support for TypeScript path aliases. This comment mentions the solution that I used in this project:  https://github.com/facebook/create-react-app/issues/12047#issuecomment-1374821527.  This is the actual solution:  https://create-react-app.dev/docs/importing-a-component/#absolute-imports.
-  * Lack of support in general and potential security concerns, as CRA's dependencies have not been updated in over a year.
+  * Lack of support in general and potential security concerns, as CRA has not been updated in over a year at the time of this writing.
 
 * TypeScript
 * Tailwind CSS
@@ -21,6 +21,7 @@ This is a collection of calculators related to making beer, mead, cider, and win
 
 ## Roadmap
 
+* Add actual home page and change bottles path to /bottles
 * Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
 * Round the values that are calculated
 * Add prettier (https://prettier.io/docs/en/install)
