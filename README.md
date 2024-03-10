@@ -21,7 +21,6 @@ This is a collection of calculators related to making beer, mead, cider, and win
 
 ## Roadmap
 
-* Add actual home page and change bottles path to /bottles
 * Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
 * Round the values that are calculated
 * Add prettier (https://prettier.io/docs/en/install)
