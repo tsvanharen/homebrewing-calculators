@@ -26,10 +26,9 @@ This is a collection of calculators related to making beer, mead, cider, and win
 ## Roadmap
 
 * Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
-* Round the values that are calculated
+* Round the values that are calculated (good unit test case here)
 * Add prettier (https://prettier.io/docs/en/install)
 * Add vitest (https://blog.ori.co/migrating-a-cra-project-to-vitejs)
 * Add semantic release (https://semantic-release.gitbook.io/semantic-release/usage/installation#installation)
 * Responsiveness
 * Add storybook and its build output
-* GH pages deploy to custom domain (fermentationsciences.xyz)
