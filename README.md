@@ -1,6 +1,8 @@
 # Homebrewing Calculators
 
-This is a collection of calculators related to making beer, mead, cider, and wine.
+This is a collection of calculators related to making beer, mead, cider, and wine that is hosted at [fermentationsciences.xyz](https://fermentationsciences.xyz).
+
+[![build/deploy](https://github.com/tsvanharen/homebrewing-calculators/actions/workflows/deploy.yml/badge.svg)](https://github.com/tsvanharen/homebrewing-calculators/actions/workflows/deploy.yml)
 
 ## Tech
 
@@ -18,6 +20,8 @@ This is a collection of calculators related to making beer, mead, cider, and win
 * React Router
   * https://create-react-app.dev/docs/adding-a-router/
   * https://github.com/remix-run/react-router/blob/dev/examples/basic
+* Hosting
+  * GitHub Pages with custom domain
 
 ## Roadmap
 
@@ -27,3 +31,5 @@ This is a collection of calculators related to making beer, mead, cider, and win
 * Add vitest (https://blog.ori.co/migrating-a-cra-project-to-vitejs)
 * Add semantic release (https://semantic-release.gitbook.io/semantic-release/usage/installation#installation)
 * Responsiveness
+* Add storybook and its build output
+* GH pages deploy to custom domain (fermentationsciences.xyz)
