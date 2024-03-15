@@ -14,7 +14,7 @@ function Intro() {
 function Notes() {
   return (
     <p>
-      The alpha acid percentage is required. Leave the field blank that you need to calculate.
+      The alpha acid percentage is required. Leave the field blank that you need to calculate.  Note that the resulting values are rounded to two decimal places.
     </p>
   );
 }
@@ -72,7 +72,7 @@ function Form() {
           With this alpha acid percentage and AAU value, you need
           {' '}
           <span className="font-bold">
-            {calcHopWeightOz}
+            {calcHopWeightOz.toFixed(2)}
             {' '}
             ounces
           </span>
@@ -88,7 +88,7 @@ function Form() {
           With this alpha acid percentage and weight in hops, your hops potentially contribute
           {' '}
           <span className="font-bold">
-            {calcAlphaAcidUnits}
+            {calcAlphaAcidUnits.toFixed(2)}
             {' '}
             AAU
           </span>

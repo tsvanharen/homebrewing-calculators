@@ -14,7 +14,7 @@ function Intro() {
 function Notes() {
   return (
     <p>
-      Note that the resulting hop weight will be in the same dimension as the recipe&apos;s hop weight that you enter (ounces, grams, etc.).
+      Note that the resulting hop weight will be in the same dimension as the recipe&apos;s hop weight that you enter (ounces, grams, etc.), and that its resulting value is rounded to two decimal places.
     </p>
   );
 }
@@ -59,7 +59,7 @@ function Form() {
         You will need
         {' '}
         <span className="font-bold">
-          {yourWeight}
+          {yourWeight.toFixed(2)}
           {' '}
           ounces, grams, etc.
         </span>

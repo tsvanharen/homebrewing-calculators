@@ -1,6 +1,6 @@
 # Homebrewing Calculators
 
-This is a collection of calculators related to making beer, mead, cider, and wine that is hosted at [fermentationsciences.xyz](https://fermentationsciences.xyz).
+This is a collection of tools related to making beer, mead, cider, and wine that is hosted at [fermentationsciences.xyz](https://fermentationsciences.xyz).
 
 [![build/deploy](https://github.com/tsvanharen/homebrewing-calculators/actions/workflows/deploy.yml/badge.svg)](https://github.com/tsvanharen/homebrewing-calculators/actions/workflows/deploy.yml)
 
@@ -8,7 +8,7 @@ This is a collection of calculators related to making beer, mead, cider, and win
 
 * React
   
-  I used Create React App to quickly generate some boilerplate. 
+  I used Create React App (CRA) to quickly generate some boilerplate. 
   
   Note: I should have used [Vite](https://blog.ori.co/migrating-a-cra-project-to-vitejs), Next.js, etc., as CRA is now abandonware.  There are some out of the box issues with CRA, like:
   * Lack of support for TypeScript path aliases. This comment mentions the solution that I used in this project:  https://github.com/facebook/create-react-app/issues/12047#issuecomment-1374821527.  This is the actual solution:  https://create-react-app.dev/docs/importing-a-component/#absolute-imports.
@@ -26,7 +26,6 @@ This is a collection of calculators related to making beer, mead, cider, and win
 ## Roadmap
 
 * Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
-* Round the values that are calculated (good unit test case here)
 * Add prettier (https://prettier.io/docs/en/install)
 * Add vitest (https://medium.com/@kafkahw/adding-vitest-react-testing-library-to-an-existing-react-project-w-o-vite-97e4aeb2ae2d)
 * Add semantic release (https://semantic-release.gitbook.io/semantic-release/usage/installation#installation)

@@ -22,7 +22,7 @@ function Notes() {
       </p>
       <p>
         Note that the volumes don&apos;t ask for a dimension (fluid ounces, gallons, etc.). It won&apos;t matter as long as the
-        volume for the beverage and the liquid addition are in the same measure.
+        volume for the beverage and the liquid addition are in the same measure.  Also note that the resulting value is rounded to two decimal places.
       </p>
     </>
   );
@@ -82,14 +82,14 @@ function Form() {
           This adds
           {' '}
           <span className="font-bold">
-            {abvChange}
+            {abvChange.toFixed(2)}
             % ABV
           </span>
           {' '}
           to your beverage, resulting in a beverage with
           {' '}
           <span className="font-bold">
-            {resultingAbv}
+            {resultingAbv.toFixed(2)}
             % ABV
           </span>
           .
@@ -102,7 +102,7 @@ function Form() {
           This results in no change in ABV to your beer, resulting in a beer with
           {' '}
           <span className="font-bold">
-            {resultingAbv}
+            {resultingAbv.toFixed(2)}
             {' '}
             % ABV
           </span>
@@ -115,14 +115,14 @@ function Form() {
           This subtracts
           {' '}
           <span className="font-bold">
-            {Math.abs(abvChange)}
+            {Math.abs(abvChange).toFixed(2)}
             % ABV
           </span>
           {' '}
           from your beverage, resulting in a beverage with
           {' '}
           <span className="font-bold">
-            {resultingAbv}
+            {resultingAbv.toFixed(2)}
             % ABV
           </span>
           .
