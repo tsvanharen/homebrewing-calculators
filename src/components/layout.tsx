@@ -5,7 +5,7 @@ import Nav from './Nav';
 export default function Layout() {
   return (
     <>
-      <header className="border-b-4 border-black pb-3 lg:flex lg:flex-row lg:items-center">
+      <header className="border-b-4 border-black pb-3 flex lg:flex-row items-center flex-col justify-center">
         <h1 className="lg:flex-grow font-semibold text-2xl uppercase whitespace-nowrap pb-2 lg:pb-0">
           <Link to="/" title="Home" className="text-inherit hover:text-fuchsia-900 hover:no-underline tracking-tight">
             Fermentation Sciences
