@@ -1,5 +1,6 @@
 {
   "jest.enable": false,
   "vitest.enable": true,
-  "vitest.commandLine": "npx vitest --coverage"
+  "vitest.commandLine": "npx vitest --coverage",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

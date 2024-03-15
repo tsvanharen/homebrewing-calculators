@@ -1,12 +1,12 @@
-import { CalculationResult } from 'types/Calculator';
-import React from 'react';
+import { CalculationResult } from "types/Calculator";
+import React from "react";
 
 export default function ButtonAlertGroup({
   result,
   calculateCallback,
 }: {
-  result: CalculationResult | undefined,
-  calculateCallback: () => void
+  result: CalculationResult | undefined;
+  calculateCallback: () => void;
 }) {
   return (
     <>
@@ -21,20 +21,19 @@ export default function ButtonAlertGroup({
       </div>
 
       {result && result.messages.length && (
-      <div className={`block py-4 px-4 border-[1px] rounded-md mt-4 text-sm ${result.type}`} role="alert">
-        {result.messages.length === 1 && result.messages[0]}
-        {result.messages.length > 1 && (
-        <ul>
-          {
-            result.messages.map((message) => (
-              <li key={message?.toString()}>
-                {message}
-              </li>
-            ))
-          }
-        </ul>
-        )}
-      </div>
+        <div
+          className={`block py-4 px-4 border-[1px] rounded-md mt-4 text-sm ${result.type}`}
+          role="alert"
+        >
+          {result.messages.length === 1 && result.messages[0]}
+          {result.messages.length > 1 && (
+            <ul>
+              {result.messages.map((message) => (
+                <li key={message?.toString()}>{message}</li>
+              ))}
+            </ul>
+          )}
+        </div>
       )}
     </>
   );
