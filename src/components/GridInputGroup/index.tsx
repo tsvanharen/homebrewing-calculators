@@ -1,24 +1,21 @@
-import React, { HTMLInputTypeAttribute } from 'react';
+import React, { HTMLInputTypeAttribute } from "react";
 
 export default function GridInputGroup({
   labelText,
   inputType,
-  dimension = '',
+  dimension = "",
   onChange,
 }: {
-  labelText: string,
-  inputType: HTMLInputTypeAttribute,
-  dimension?: string,
-  onChange: React.ChangeEventHandler<HTMLInputElement>
+  labelText: string;
+  inputType: HTMLInputTypeAttribute;
+  dimension?: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
 }) {
   const id = React.useId();
 
   return (
     <div>
-      <label
-        htmlFor={id}
-        className="uppercase font-bold block pb-1"
-      >
+      <label htmlFor={id} className="uppercase font-bold block pb-1">
         {labelText}
       </label>
       <div>

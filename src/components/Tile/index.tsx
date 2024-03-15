@@ -1,18 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Calculator from 'types/Calculator';
+import React from "react";
+import { Link } from "react-router-dom";
+import Calculator from "types/Calculator";
 
-export default function Tile({
-  calculator,
-}: {
-  calculator: Calculator
-}) {
+export default function Tile({ calculator }: { calculator: Calculator }) {
   return (
     <div className="border-2 border-slate-700 rounded-md p-4 pb-6 flex flex-col">
       <div className="flex-grow">
-        <h2>
-          {calculator.navItem.title}
-        </h2>
+        <h2>{calculator.navItem.title}</h2>
         <calculator.Intro />
       </div>
       <div className="text-right">

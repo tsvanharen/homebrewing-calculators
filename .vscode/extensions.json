@@ -1,6 +1,3 @@
 {
-  "recommendations": [
-    "vitest.explorer",
-    "ryanluker.vscode-coverage-gutters"
-  ]
+  "recommendations": ["vitest.explorer", "ryanluker.vscode-coverage-gutters"]
 }
