@@ -29,7 +29,6 @@ This is a collection of tools related to making beer, mead, cider, and wine that
 ## Roadmap
 
 - Add calculation to alpha acid percentage calculator to account for the use case when you want to know the alpha acid percentage contribution of the hops you have, rather than the weight
-- Add prettier (https://prettier.io/docs/en/install)
 - Add vitest (https://medium.com/@kafkahw/adding-vitest-react-testing-library-to-an-existing-react-project-w-o-vite-97e4aeb2ae2d)
 - Add semantic release (https://semantic-release.gitbook.io/semantic-release/usage/installation#installation)
 - Add storybook and its build output
