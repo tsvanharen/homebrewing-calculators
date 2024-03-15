@@ -22,7 +22,7 @@ export function Render({
   calculator: Calculator
 }) {
   return (
-    <div className="border-slate-400 border-2 rounded-md p-6 relative z-10">
+    <div className="p-4">
       <calculator.Intro />
       <calculator.Notes />
       <section>
@@ -30,7 +30,7 @@ export function Render({
       </section>
       {calculator.sources && (
       <>
-        <h3 className="font-bold pt-2 mt-4 border-t-slate-400 border-t-2">
+        <h3 className="font-bold mt-4">
           Sources
         </h3>
         <ul>
