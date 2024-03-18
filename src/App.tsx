@@ -1,5 +1,5 @@
 import Home from "components/Home";
-import Layout from "components/layout";
+import Layout from "layout";
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Calculators, Render } from "types/Calculator";

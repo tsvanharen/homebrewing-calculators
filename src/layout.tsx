@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import Nav from "./Nav";
+import Nav from "./components/Nav";
 
 export default function Layout() {
   return (
